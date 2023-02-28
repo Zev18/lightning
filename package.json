@@ -1,0 +1,21 @@
+{
+  "name": "lightning",
+  "displayName": "Lightning",
+  "description": "An electrifying, vibrant dark theme for those who enjoy cool colors. ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Lightning",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Lightning-color-theme.json"
+      }
+    ]
+  }
+}
