@@ -17,5 +17,9 @@
         "path": "./themes/Lightning-color-theme.json"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zev18/lightning.git"
   }
 }
