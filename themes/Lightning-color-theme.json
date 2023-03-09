@@ -151,7 +151,7 @@
     "titleBar.inactiveForeground": "#646fea",
 
     "menubar.selectionBackground": "#3e58ef5c",
-    "menu.background": "#181b53dd",
+    "menu.background": "#181b53e9",
     "menu.separatorBackground": "#3e5aef",
     "menu.foreground": "#65baff",
     "menu.selectionForeground": "#65F7FF",
@@ -291,12 +291,12 @@
       "name": "Function, Special Method",
       "scope": [
         "entity.name.function",
-        "meta.function-call",
+        "meta.function-call.generic",
         "variable.function",
         "keyword.other.special-method"
       ],
       "settings": {
-        "foreground": "#51d6ff"
+        "foreground": "#5171ff"
       }
     },
     {
@@ -304,6 +304,13 @@
       "scope": ["support.function.misc.css", "support.function"],
       "settings": {
         "foreground": "#9369fc"
+      }
+    },
+    {
+      "name": "Function args",
+      "scope": ["meta.function-call.arguments"],
+      "settings": {
+        "foreground": "#00c8ff"
       }
     },
     {
