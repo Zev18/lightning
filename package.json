@@ -1,8 +1,9 @@
 {
   "name": "lightning",
-  "displayName": "Lightning",
-  "description": "An electrifying, vibrant dark theme for those who enjoy cool colors.",
-  "version": "0.0.1",
+  "displayName": "Lightning Theme",
+  "icon": "assets/lightning.png",
+  "description": "An electrifying, vibrant theme.",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -21,5 +22,10 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Zev18/lightning.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/Zev18/lightning/issues",
+    "email": "zevross@gmail.com"
+  },
+  "license": "MIT"
 }

@@ -29,3 +29,9 @@ I developed Lightning to be a fun theme! A theme with more good colors (like blu
 Lightning was designed with a lot of italic components. I recommend using a font that has stylized italics, such as [Cascadia Code](https://github.com/microsoft/cascadia-code) with the cursive-style italics enabled.
 
 The screenshots above, in addition to Cascadia Code, use the [Bearded Icons](https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons) file icon pack and the [Feather Icons](https://marketplace.visualstudio.com/items?itemName=melishev.feather-vscode) product icon pack.
+
+## Support the dev
+
+Like this theme? Consider leaving a review (it's free) or, if you _really_ like it, tip me a few bucks on ko-fi.
+
+<a href='https://ko-fi.com/supportkofi' target='_blank'><img height='35' style='border:0px;height:46px;' src='https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />

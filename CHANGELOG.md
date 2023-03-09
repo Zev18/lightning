@@ -1,9 +1,5 @@
-# Change Log
+# Changelog for Lightning Theme
 
-All notable changes to the "lightning" extension will be documented in this file.
+## [RELEASE] - 0.1.0 - 3/9/2023
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
-
-## [Unreleased]
-
-- Initial release
+Released!! Wohoo
