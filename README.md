@@ -17,3 +17,15 @@ However, color themes nowadays are focused on boring stuff like "readability" or
 I developed Lightning to be a fun theme! A theme with more good colors (like blue) and less dumb colors like "orange" or "yellow." Will this theme increase your productivity? No. Will it be easy to read? No. Will it be easy on the eyes? No. But will it make coding more fun? Hell yeah.
 
 ## Installation
+
+- Open the Extensions sidebar in VS Code
+- Search for "Lightning"
+- Click Install
+- Open the Command Palette with Ctrl + Shift + P (Windows) or ⇧⌘P (Mac)
+- Select "Preferences: Color Theme" and choose "Lightning"
+
+## Recommended pairing
+
+Lightning was designed with a lot of italic components. I recommend using a font that has stylized italics, such as [Cascadia Code](https://github.com/microsoft/cascadia-code) with the cursive-style italics enabled.
+
+The screenshots above, in addition to Cascadia Code, use the [Bearded Icons](https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons) file icon pack and the [Feather Icons](https://marketplace.visualstudio.com/items?itemName=melishev.feather-vscode) product icon pack.
