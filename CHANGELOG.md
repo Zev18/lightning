@@ -1,5 +1,15 @@
 # Changelog for Lightning Theme
 
+## [0.3.0] - 2023-03-15
+
+### Added
+
+- Aligned Dart colors to better suit theme
+
+### Changed
+
+- Changed list background and empty tab to be less vibrant
+
 ## [0.2.0] - 2023-03-13
 
 ### Added

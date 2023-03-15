@@ -18,7 +18,7 @@
     "checkbox.selectBackground": "#3E5AEF",
     "checkbox.background": "#080524",
     "checkbox.foreground": "#3E5AEF",
-    "dropdown.background": "#3E5AEF",
+    "dropdown.background": "#080524",
     "dropdown.foreground": "#65F7FF",
     "dropdown.border": "#65F7FF",
     "dropdown.listBackground": "#331376",
@@ -70,7 +70,7 @@
     "editorGroup.dropBackground": "#3e58ef94",
     "editorGroupHeader.noTabsBackground": "#080524",
     "editorGroupHeader.tabsBackground": "#150b39",
-    "editorGroup.emptyBackground": "#231161",
+    "editorGroup.emptyBackground": "#0a0729",
     "editorGroup.dropIntoPromptBackground": "#080524",
     "editorGroup.dropIntoPromptBorder": "#65F7FF",
     "editorGroup.dropIntoPromptForeground": "#3e58ef",
@@ -78,6 +78,7 @@
     "tab.activeBackground": "#0e0c29",
     "tab.activeForeground": "#65F7FF",
     "tab.unfocusedInactiveBackground": "#16183d",
+    "tab.border": "#080524",
     "tab.inactiveBackground": "#16183d",
     "tab.inactiveForeground": "#3E5AEF",
 
@@ -232,6 +233,13 @@
       }
     },
     {
+      "name": "Storage - annotation",
+      "scope": ["storage.type.annotation"],
+      "settings": {
+        "foreground": "#ff4583"
+      }
+    },
+    {
       "name": "Storage Modifier",
       "scope": ["storage.modifier", "storage.type.class"],
       "settings": {
@@ -309,7 +317,11 @@
     },
     {
       "name": "CSS functions",
-      "scope": ["support.function.misc.css", "support.function"],
+      "scope": [
+        "support.function.misc.css",
+        "support.function",
+        "support.class"
+      ],
       "settings": {
         "foreground": "#9369fc"
       }
@@ -356,6 +368,13 @@
       }
     },
     {
+      "name": "Source - Dart",
+      "scope": ["source.dart"],
+      "settings": {
+        "foreground": "#59afff"
+      }
+    },
+    {
       "name": "Number",
       "scope": ["constant.numeric"],
       "settings": {
@@ -395,7 +414,6 @@
       "scope": [
         "entity.name",
         "support.type",
-        "support.class",
         "support.other.namespace.use.php",
         "meta.use.php",
         "support.other.namespace.php",
