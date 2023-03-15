@@ -4,7 +4,7 @@
   "publisher": "zevross",
   "icon": "assets/lightning.png",
   "description": "An electrifying, vibrant theme.",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "engines": {
     "vscode": "^1.75.0"
   },
