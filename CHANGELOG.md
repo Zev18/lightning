@@ -1,5 +1,11 @@
 # Changelog for Lightning Theme
 
+## [0.4.0] - 2023-04-18
+
+### Added
+
+- Fixed colors in the settings menu
+
 ## [0.3.0] - 2023-03-15
 
 ### Added
