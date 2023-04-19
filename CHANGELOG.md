@@ -1,5 +1,11 @@
 # Changelog for Lightning Theme
 
+## [1.0.0] - 2023-04-19
+
+### Added
+
+- Refactored the entire thing so that it uses variables now. Making variant themes will be easier now. Expect more variat themes to come soon.
+
 ## [0.4.0] - 2023-04-18
 
 ### Added
