@@ -1,3 +1,17 @@
 {
-    "eslint.enable": false
+  "eslint.enable": false,
+  "cSpell.words": [
+    "Blockquote",
+    "Blockquotes",
+    "codetag",
+    "Docstrings",
+    "hashkey",
+    "LANGAGES",
+    "lookaheads",
+    "mappedtype",
+    "objc",
+    "omment",
+    "selectionset",
+    "Stackframe"
+  ]
 }
