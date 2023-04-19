@@ -49,9 +49,15 @@
   "scripts": {
     "start": "nodemon --watch src src/index.js",
     "build": "node src/index.js && mkdir -p build",
-    "prepublishOnly": "npm run build && vsce publish"
+    "prepublishOnly": "npm run build && vsce publish",
+    "vscode:prepublish": "npm run esbuild-base -- --minify",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "npm run esbuild-base -- --sourcemap",
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "test-compile": "tsc -p ./"
   },
   "devDependencies": {
+    "esbuild": "^0.17.17",
     "nodemon": "^2.0.22",
     "vsce": "^2.15.0"
   },
