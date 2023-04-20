@@ -1,9 +1,12 @@
+const { colors } = require("./colors");
+
 const fs = require("fs").promises;
 const getTheme = require("./theme");
 
 const lightning = getTheme({
   theme: "dark",
   name: "lightning",
+  colors: colors,
 });
 
 // write themes

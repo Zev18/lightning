@@ -1,11 +1,10 @@
-const { colors } = require("./colors");
 const { hexToHexWithAlpha } = require("colors-convert");
 
 function hex(color, alpha = 1) {
   return hexToHexWithAlpha(color, alpha);
 }
 
-function getTheme({ theme, name }) {
+function getTheme({ theme, name, colors }) {
   return {
     name: name,
     type: "dark",
