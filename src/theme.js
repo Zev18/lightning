@@ -85,11 +85,11 @@ function getTheme({ theme, name, colors }) {
       // Border color of checkbox widget.
       // "checkbox.border": hex(colors.unknown),
       //  Secondary button background color.
-      // "button.secondaryBackground": hex(colors.unknown),
+      "button.secondaryBackground": hex(colors.secondaryAccent),
       // Secondary button foreground color.
-      // "button.secondaryForeground": hex(colors.unknown),
+      "button.secondaryForeground": hex(colors.bg),
       // Secondary button background color when hovering.
-      // "button.secondaryHoverBackground": hex(colors.unknown),
+      "button.secondaryHoverBackground": hex(colors.link),
 
       //////////////////////////////
       // DROPDOWN CONTROL

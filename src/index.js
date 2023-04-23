@@ -1,4 +1,5 @@
 const { colors } = require("./colors");
+const darkColors = require("./darkColors").colors;
 
 const fs = require("fs").promises;
 const getTheme = require("./theme");

@@ -1,5 +1,5 @@
 ///////////////////////
-// DEFAULT PALETTE
+// DARK PALETTE
 ///////////////////////
 
 // basics
@@ -106,9 +106,7 @@ const colors = {
   twilight: TWILIGHT,
   indigo: INDIGO,
   violet: VIOLET,
-  orange: ORANGE,
   red: RED,
-  pink: PINK,
 };
 
 module.exports = { colors };
