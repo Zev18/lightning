@@ -42,12 +42,12 @@ const COMMENT = "#4E548F";
 
 const GREEN = "#66ffde";
 const TEAL = "#21fbff";
-const CYAN = "#61d0ff";
+const CYAN = "#3EC5FF";
 const SKY = "#44b1ff";
 const BLUE = "#2681f9";
 const TWILIGHT = "#3c6aff";
 const INDIGO = "#9172FF";
-const VIOLET = "#CCA0FF";
+const VIOLET = "#B76DFF";
 const RED = "#ff477e";
 const PINK = "#ff7ca8";
 const ORANGE = "#f07178";
@@ -607,7 +607,7 @@ function getTheme({ theme, name }) {
       // CodeLens:
       // ----------------------------------------
       // Foreground color of an editor CodeLens.
-      "editorCodeLens.foreground": hex(colors.cyan, 0.8),
+      "editorCodeLens.foreground": hex(colors.editorDefault, 0.8),
 
       // Lightbulb:
       // ----------------------------------------
@@ -1417,7 +1417,7 @@ function getTheme({ theme, name }) {
         name: "Colors - hex",
         scope: ["punctuation.definition.constant.css"],
         settings: {
-          foreground: hex(colors.cyan, 0.5),
+          foreground: hex(colors.cyan, 0.7),
         },
       },
       {
@@ -1497,7 +1497,7 @@ function getTheme({ theme, name }) {
           "markup.deleted.git_gutter",
         ],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1522,9 +1522,10 @@ function getTheme({ theme, name }) {
           "meta.function-call.generic",
           "variable.function",
           "keyword.other.special-method",
+          "entity.name",
         ],
         settings: {
-          foreground: hex(colors.sky),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1535,7 +1536,7 @@ function getTheme({ theme, name }) {
           "support.class",
         ],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1599,7 +1600,7 @@ function getTheme({ theme, name }) {
         name: "Units",
         scope: ["keyword.other.unit"],
         settings: {
-          foreground: hex(colors.pink, 0.5),
+          foreground: hex(colors.pink, 0.7),
         },
       },
       {
@@ -1626,7 +1627,6 @@ function getTheme({ theme, name }) {
       {
         name: "Class, Support",
         scope: [
-          "entity.name",
           "support.type",
           "support.other.namespace.use.php",
           "meta.use.php",
@@ -1635,7 +1635,7 @@ function getTheme({ theme, name }) {
           "support.type.sys-types",
         ],
         settings: {
-          foreground: hex(colors.red),
+          foreground: hex(colors.violet),
         },
       },
       {
@@ -1656,8 +1656,7 @@ function getTheme({ theme, name }) {
           "source.postcss support.type.property-name",
         ],
         settings: {
-          foreground: hex(colors.violet),
-          fontStyle: "italic",
+          foreground: hex(colors.twilight),
         },
       },
       {
@@ -1668,7 +1667,7 @@ function getTheme({ theme, name }) {
           "variable.other.class.js",
         ],
         settings: {
-          foreground: hex(colors.red),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1694,7 +1693,7 @@ function getTheme({ theme, name }) {
           "variable.function.constructor",
         ],
         settings: {
-          foreground: hex(colors.sky),
+          foreground: hex(colors.cyan),
         },
       },
       {
@@ -1720,7 +1719,7 @@ function getTheme({ theme, name }) {
         name: "CSS Classes",
         scope: ["entity.other.attribute-name.class"],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {

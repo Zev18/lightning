@@ -37,12 +37,12 @@ const COMMENT = "#4E548F";
 
 const GREEN = "#66ffde";
 const TEAL = "#21fbff";
-const CYAN = "#61d0ff";
+const CYAN = "#3EC5FF";
 const SKY = "#44b1ff";
 const BLUE = "#2681f9";
 const TWILIGHT = "#3c6aff";
 const INDIGO = "#9172FF";
-const VIOLET = "#CCA0FF";
+const VIOLET = "#B76DFF";
 const RED = "#ff477e";
 const PINK = "#ff7ca8";
 const ORANGE = "#f07178";

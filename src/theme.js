@@ -493,7 +493,7 @@ function getTheme({ theme, name, colors }) {
       // CodeLens:
       // ----------------------------------------
       // Foreground color of an editor CodeLens.
-      "editorCodeLens.foreground": hex(colors.cyan, 0.8),
+      "editorCodeLens.foreground": hex(colors.editorDefault, 0.8),
 
       // Lightbulb:
       // ----------------------------------------
@@ -1303,7 +1303,7 @@ function getTheme({ theme, name, colors }) {
         name: "Colors - hex",
         scope: ["punctuation.definition.constant.css"],
         settings: {
-          foreground: hex(colors.cyan, 0.5),
+          foreground: hex(colors.cyan, 0.7),
         },
       },
       {
@@ -1383,7 +1383,7 @@ function getTheme({ theme, name, colors }) {
           "markup.deleted.git_gutter",
         ],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1408,9 +1408,10 @@ function getTheme({ theme, name, colors }) {
           "meta.function-call.generic",
           "variable.function",
           "keyword.other.special-method",
+          "entity.name",
         ],
         settings: {
-          foreground: hex(colors.sky),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1421,7 +1422,7 @@ function getTheme({ theme, name, colors }) {
           "support.class",
         ],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1485,7 +1486,7 @@ function getTheme({ theme, name, colors }) {
         name: "Units",
         scope: ["keyword.other.unit"],
         settings: {
-          foreground: hex(colors.pink, 0.5),
+          foreground: hex(colors.pink, 0.7),
         },
       },
       {
@@ -1512,7 +1513,6 @@ function getTheme({ theme, name, colors }) {
       {
         name: "Class, Support",
         scope: [
-          "entity.name",
           "support.type",
           "support.other.namespace.use.php",
           "meta.use.php",
@@ -1521,7 +1521,7 @@ function getTheme({ theme, name, colors }) {
           "support.type.sys-types",
         ],
         settings: {
-          foreground: hex(colors.red),
+          foreground: hex(colors.violet),
         },
       },
       {
@@ -1542,8 +1542,7 @@ function getTheme({ theme, name, colors }) {
           "source.postcss support.type.property-name",
         ],
         settings: {
-          foreground: hex(colors.violet),
-          fontStyle: "italic",
+          foreground: hex(colors.twilight),
         },
       },
       {
@@ -1554,7 +1553,7 @@ function getTheme({ theme, name, colors }) {
           "variable.other.class.js",
         ],
         settings: {
-          foreground: hex(colors.red),
+          foreground: hex(colors.teal),
         },
       },
       {
@@ -1606,7 +1605,7 @@ function getTheme({ theme, name, colors }) {
         name: "CSS Classes",
         scope: ["entity.other.attribute-name.class"],
         settings: {
-          foreground: hex(colors.violet),
+          foreground: hex(colors.teal),
         },
       },
       {
