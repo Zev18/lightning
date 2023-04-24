@@ -1,5 +1,12 @@
 # Changelog for Lightning Theme
 
+## [1.0.1] - 2023-04-24
+
+### Added
+
+- Corrected debug toolbar colors
+- Finetuned various other colors
+
 ## [1.0.0] - 2023-04-19
 
 ### Added
