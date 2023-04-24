@@ -1,13 +1,18 @@
 const { colors } = require("./colors");
-const darkColors = require("./darkColors").colors;
+const getDarkTheme = require("./darkColors");
 
 const fs = require("fs").promises;
 const getTheme = require("./theme");
 
 const lightning = getTheme({
   theme: "dark",
-  name: "lightning",
+  name: "Lightning",
   colors: colors,
+});
+
+const lightningDark = getDarkTheme({
+  theme: "dark",
+  name: "Lightning Dark",
 });
 
 // write themes
@@ -17,6 +22,10 @@ fs.mkdir("./themes", { recursive: true })
       fs.writeFile(
         "./themes/lightning-color-theme.json",
         JSON.stringify(lightning, null)
+      ),
+      fs.writeFile(
+        "./themes/lightning-dark-color-theme.json",
+        JSON.stringify(lightningDark, null)
       ),
     ])
   )

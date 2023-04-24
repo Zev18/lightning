@@ -908,7 +908,7 @@ function getTheme({ theme, name, colors }) {
       // The color of the border that separates split panes within the terminal. This defaults to panel.border.
       // "terminal.border": hex(colors.gray06),
       // The default foreground color of the Integrated Terminal.
-      "terminal.foreground": hex(colors.added),
+      "terminal.foreground": hex(colors.accent),
       // 'Black' ANSI color in the terminal.
       // "terminal.ansiBlack": hex(colors.unknown),
       // 'Blue' ANSI color in the terminal.
@@ -1288,6 +1288,7 @@ function getTheme({ theme, name, colors }) {
         scope: ["variable", "string constant.other.placeholder"],
         settings: {
           foreground: hex(colors.cyan),
+          fontStyle: "italic",
         },
       },
       {
@@ -1377,6 +1378,7 @@ function getTheme({ theme, name, colors }) {
         name: "Tag",
         scope: [
           "entity.name.tag",
+          "entity.name.type.module",
           "meta.tag.sgml",
           "markup.deleted.git_gutter",
         ],
