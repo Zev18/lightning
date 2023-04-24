@@ -493,7 +493,7 @@ function getTheme({ theme, name, colors }) {
       // CodeLens:
       // ----------------------------------------
       // Foreground color of an editor CodeLens.
-      "editorCodeLens.foreground": hex(colors.secondaryAccent),
+      "editorCodeLens.foreground": hex(colors.cyan, 0.8),
 
       // Lightbulb:
       // ----------------------------------------
@@ -953,9 +953,9 @@ function getTheme({ theme, name, colors }) {
       // DEBUG
       //////////////////////////////
       // Debug toolbar background color.
-      // "debugToolBar.background": hex(colors.unknown),
+      "debugToolBar.background": hex(colors.bg2),
       // Debug toolbar border color.
-      // "debugToolBar.border": hex(colors.unknown),
+      "debugToolBar.border": hex(colors.accent),
       // Background color of the top stack frame highlight in the editor.
       // "editor.stackFrameHighlightBackground": hex(colors.unknown),
       // Background color of the focused stack frame highlight in the editor.
@@ -1049,9 +1049,9 @@ function getTheme({ theme, name, colors }) {
       // Background color of breadcrumb items.
       // "breadcrumb.background": hex(colors.gray09),
       // Color of focused breadcrumb items.
-      // "breadcrumb.focusForeground": hex(colors.gray01),
+      "breadcrumb.focusForeground": hex(colors.cyan),
       // Color of selected breadcrumb items.
-      // "breadcrumb.activeSelectionForeground": hex(colors.cyan),
+      "breadcrumb.activeSelectionForeground": hex(colors.accent),
       // Background color of breadcrumb item picker.
       // "breadcrumbPicker.background": hex(colors.gray05),
 
@@ -1321,6 +1321,14 @@ function getTheme({ theme, name, colors }) {
         },
       },
       {
+        name: "Storage - function",
+        scope: ["storage.type.function"],
+        settings: {
+          foreground: hex(colors.indigo),
+          fontStyle: "bold",
+        },
+      },
+      {
         name: "Storage - annotation",
         scope: ["storage.type.annotation"],
         settings: {
@@ -1347,6 +1355,8 @@ function getTheme({ theme, name, colors }) {
           "punctuation.section.embedded",
           "keyword.other",
           "keyword.control",
+
+          "keyword.operator.assignment",
         ],
         settings: {
           foreground: hex(colors.twilight),
@@ -1356,7 +1366,6 @@ function getTheme({ theme, name, colors }) {
         name: "Operators",
         scope: [
           "punctuation.definition.keyword",
-          "keyword.operator.assignment",
           "keyword.operator.comparison",
           "keyword.operator.arithmetic",
         ],
