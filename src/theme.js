@@ -910,37 +910,37 @@ function getTheme({ theme, name, colors }) {
       // The default foreground color of the Integrated Terminal.
       "terminal.foreground": hex(colors.accent),
       // 'Black' ANSI color in the terminal.
-      // "terminal.ansiBlack": hex(colors.unknown),
+      "terminal.ansiBlack": hex(colors.terminalBlack),
       // 'Blue' ANSI color in the terminal.
-      // "terminal.ansiBlue": hex(colors.unknown),
+      "terminal.ansiBlue": hex(colors.terminalBlue),
       // 'BrightBlack' ANSI color in the terminal.
-      // "terminal.ansiBrightBlack": hex(colors.unknown),
+      "terminal.ansiBrightBlack": hex(colors.terminalBrightBlack),
       // 'BrightBlue' ANSI color in the terminal.
-      // "terminal.ansiBrightBlue": hex(colors.unknown),
+      "terminal.ansiBrightBlue": hex(colors.terminalBrightBlue),
       // 'BrightCyan' ANSI color in the terminal.
-      // "terminal.ansiBrightCyan": hex(colors.unknown),
+      "terminal.ansiBrightCyan": hex(colors.terminalBrightCyan),
       // 'BrightGreen' ANSI color in the terminal.
-      // "terminal.ansiBrightGreen": hex(colors.unknown),
+      "terminal.ansiBrightGreen": hex(colors.terminalBrightGreen),
       // 'BrightMagenta' ANSI color in the terminal.
-      // "terminal.ansiBrightMagenta": colors.pink,
+      "terminal.ansiBrightMagenta": hex(colors.terminalBrightMagenta),
       // 'BrightRed' ANSI color in the terminal.
-      // "terminal.ansiBrightRed": hex(colors.rose),
+      "terminal.ansiBrightRed": hex(colors.terminalBrightRed),
       // 'BrightWhite' ANSI color in the terminal.
-      // "terminal.ansiBrightWhite": hex(colors.gray01),
+      "terminal.ansiBrightWhite": hex(colors.terminalBrightWhite),
       // 'BrightYellow' ANSI color in the terminal.
-      // "terminal.ansiBrightYellow": hex(colors.yellow),
+      "terminal.ansiBrightYellow": hex(colors.terminalBrightYellow),
       // 'Cyan' ANSI color in the terminal.
-      // "terminal.ansiCyan": hex(colors.unknown),
+      "terminal.ansiCyan": hex(colors.terminalCyan),
       // 'Green' ANSI color in the terminal.
-      // "terminal.ansiGreen": hex(colors.unknown),
+      "terminal.ansiGreen": hex(colors.terminalGreen),
       // 'Magenta' ANSI color in the terminal.
-      // "terminal.ansiMagenta": colors.pink,
+      "terminal.ansiMagenta": hex(colors.terminalMagenta),
       // 'Red' ANSI color in the terminal.
-      // "terminal.ansiRed": hex(colors.rose),
+      "terminal.ansiRed": hex(colors.terminalRed),
       // 'White' ANSI color in the terminal.
-      // "terminal.ansiWhite": hex(colors.gray01),
+      "terminal.ansiWhite": hex(colors.terminalWhite),
       // 'Yellow' ANSI color in the terminal.
-      // "terminal.ansiYellow": hex(colors.yellow),
+      "terminal.ansiYellow": hex(colors.terminalYellow),
 
       // The selection background color of the terminal.
       // "terminal.selectionBackground": hex(colors.lavender, 0.2),
@@ -1384,6 +1384,7 @@ function getTheme({ theme, name, colors }) {
         ],
         settings: {
           foreground: hex(colors.teal),
+          fontStyle: "bold",
         },
       },
       {

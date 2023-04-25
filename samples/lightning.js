@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
 
+/**
+ * The LightningCounter function is a React component that counts lightning strikes and allows the user
+ * to start and stop detection.
+ * @returns The LightningCounter component is being returned, which renders a header, a strike count,
+ * and a button to toggle lightning detection on and off. The component uses state and useEffect hooks
+ * to update the strike count when lightning is detected.
+ */
 function LightningCounter() {
   const [strikeCount, setStrikeCount] = useState(0);
   const [isDetecting, setIsDetecting] = useState(false);

@@ -30,6 +30,11 @@
         "label": "Lightning Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/Lightning-dark-color-theme.json"
+      },
+      {
+        "label": "Lightning Light",
+        "uiTheme": "vs",
+        "path": "./themes/lightning-light-color-theme.json"
       }
     ]
   },
