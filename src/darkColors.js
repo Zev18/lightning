@@ -1186,6 +1186,14 @@ function getTheme({ theme, name }) {
       // Background color of breadcrumb item picker.
       // "breadcrumbPicker.background": hex(colors.gray05),
 
+      "editorBracketHighlight.foreground1": "#3fdcff",
+      "editorBracketHighlight.foreground2": "#3490ff",
+      "editorBracketHighlight.foreground3": "#6b7aff",
+      "editorBracketHighlight.foreground4": "#996eff",
+      "editorBracketHighlight.foreground5": "#bc4fff",
+      "editorBracketHighlight.foreground6": "#f786ff",
+      "editorBracketHighlight.unexpectedBracket.foreground": "#ff1d52",
+
       //////////////////////////////
       // SNIPPETS
       // The theme colors for snippets:
