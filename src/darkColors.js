@@ -1023,7 +1023,7 @@ function getTheme({ theme, name }) {
       // QUICK PICKER
       //////////////////////////////
       // Quick picker (Quick Open) color for grouping borders.
-      // "pickerGroup.border": hex(colors.rose),
+      "pickerGroup.border": hex(colors.secondaryAccent, 0.5),
       // Quick picker (Quick Open) color for grouping labels.
       // "pickerGroup.foreground": hex(colors.rose),
       // Quick input background color. The quick input widget is the container for views like the color theme picker.

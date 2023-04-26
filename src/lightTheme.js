@@ -890,11 +890,11 @@ function getTheme({ theme, name }) {
       // The Status Bar is shown in the bottom of the workbench.
       //////////////////////////////
       // Standard Status Bar background color.
-      "statusBar.background": hex(colors.bg),
+      "statusBar.background": hex(colors.bg1),
       // Status Bar foreground color.
       "statusBar.foreground": hex(colors.accent),
       // Status Bar border color separating the Status Bar and editor.
-      // "statusBar.border": hex(colors.gray06),
+      "statusBar.border": hex(colors.accent, 0.8),
 
       // Status Bar background color when a program is being debugged.
       "statusBar.debuggingBackground": hex(colors.bg),
@@ -1022,7 +1022,7 @@ function getTheme({ theme, name }) {
       // QUICK PICKER
       //////////////////////////////
       // Quick picker (Quick Open) color for grouping borders.
-      // "pickerGroup.border": hex(colors.rose),
+      "pickerGroup.border": hex(colors.accent),
       // Quick picker (Quick Open) color for grouping labels.
       // "pickerGroup.foreground": hex(colors.rose),
       // Quick input background color. The quick input widget is the container for views like the color theme picker.
