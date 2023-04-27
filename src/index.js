@@ -59,6 +59,13 @@ const materialDay = getMaterialThemeLight({
   saturation: "low",
 });
 
+const materialSoft = getMaterialThemeDark({
+  theme: "dark",
+  name: "Lightning Material - Soft",
+  bgColor: "#262b3d",
+  saturation: "low",
+});
+
 const soft = getSoft({
   theme: "dark",
   name: "Lightning Soft",
@@ -112,6 +119,10 @@ fs.mkdir("./themes", { recursive: true })
       fs.writeFile(
         "./themes/soft-dark-color-theme.json",
         JSON.stringify(softAlt, null)
+      ),
+      fs.writeFile(
+        "./themes/material-soft-color-theme.json",
+        JSON.stringify(materialSoft, null)
       ),
     ])
   )
