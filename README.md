@@ -4,7 +4,7 @@
 
 A dark, vibrant theme for those who enjoy cool colors.
 
-![Lightning promo](assets/Lightning_promo.jpeg)
+![Lightning promo](https://raw.githubusercontent.com/Zev18/lightning/main/assets/Lightning_promo.jpeg)
 
 ## About
 
