@@ -35,6 +35,31 @@
         "label": "Lightning Light",
         "uiTheme": "vs",
         "path": "./themes/lightning-light-color-theme.json"
+      },
+      {
+        "label": "Lightning Cloud",
+        "uiTheme": "vs",
+        "path": "./themes/lightning-light-alt-color-theme.json"
+      },
+      {
+        "label": "Lightning Material - Midnight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/material-midnight-color-theme.json"
+      },
+      {
+        "label": "Lightning Material - Twilight",
+        "uiTheme": "vs-dark",
+        "path": "./themes/material-twilight-color-theme.json"
+      },
+      {
+        "label": "Lightning Material - Evening",
+        "uiTheme": "vs-dark",
+        "path": "./themes/material-evening-color-theme.json"
+      },
+      {
+        "label": "Lightning Material - Day",
+        "uiTheme": "vs",
+        "path": "./themes/material-day-color-theme.json"
       }
     ]
   },
@@ -71,6 +96,7 @@
     "vsce": "^2.15.0"
   },
   "dependencies": {
+    "color-convert": "^2.0.1",
     "colors-convert": "^1.4.1",
     "fs": "^0.0.1-security"
   }
