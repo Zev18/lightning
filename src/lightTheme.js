@@ -379,7 +379,7 @@ function getTheme({ theme, name }) {
       // Activity notification badge foreground color.
       "activityBarBadge.foreground": hex("#004d9f"),
       // Activity Bar active indicator border color (left vertical line).
-      "activityBar.activeBorder": hex(colors.bg),
+      "activityBar.activeBorder": hex(colors.bg1),
       // Activity Bar optional background color for the active element.
       // "activityBar.activeBackground": hex(colors.accent),
       // Activity bar focus border color for the active item.

@@ -16,7 +16,7 @@ function LightningCounter() {
     if (isDetecting) {
       intervalId = setInterval(() => {
         if (isLightningStrike()) {
-          setStrikeCount((count) => count + 1);
+          setStrikeCount((count) => count + 1); // Increment the strike count
         }
       }, 100);
     }
