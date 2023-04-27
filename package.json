@@ -60,6 +60,16 @@
         "label": "Lightning Material - Day",
         "uiTheme": "vs",
         "path": "./themes/material-day-color-theme.json"
+      },
+      {
+        "label": "Lightning Soft",
+        "uiTheme": "vs-dark",
+        "path": "./themes/soft-color-theme.json"
+      },
+      {
+        "label": "Lightning Soft - Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/soft-dark-color-theme.json"
       }
     ]
   },

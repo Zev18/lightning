@@ -1007,6 +1007,10 @@ function getTheme({ theme, name, colors }) {
       // The line that indicates a modified setting.
       // "settings.modifiedItemIndicator": hex(colors.cyan),
 
+      "settings.sashBorder": hex(colors.secondaryAccent, 0.5),
+      "settings.dropdownBorder": hex(colors.secondaryAccent, 0.5),
+      "settings.dropdownListBorder": hex(colors.secondaryAccent, 0.5),
+
       // Dropdown background.
       // "settings.dropdownBackground": hex(colors.gray05),
       // Dropdown foreground.

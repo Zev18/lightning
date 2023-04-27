@@ -4,6 +4,8 @@ const getLight = require("./lightTheme");
 const getLightAlt = require("./lightAlt");
 const getMaterialThemeDark = require("./materialThemeDark");
 const getMaterialThemeLight = require("./materialThemeLight");
+const getSoft = require("./soft.js");
+const getSoftAlt = require("./softAlt.js");
 
 const fs = require("fs").promises;
 const getTheme = require("./theme");
@@ -57,6 +59,16 @@ const materialDay = getMaterialThemeLight({
   saturation: "low",
 });
 
+const soft = getSoft({
+  theme: "dark",
+  name: "Lightning Soft",
+});
+
+const softAlt = getSoftAlt({
+  theme: "dark",
+  name: "Lightning Soft - Dark",
+});
+
 // write themes
 fs.mkdir("./themes", { recursive: true })
   .then(() =>
@@ -92,6 +104,14 @@ fs.mkdir("./themes", { recursive: true })
       fs.writeFile(
         "./themes/material-day-color-theme.json",
         JSON.stringify(materialDay, null)
+      ),
+      fs.writeFile(
+        "./themes/soft-color-theme.json",
+        JSON.stringify(soft, null)
+      ),
+      fs.writeFile(
+        "./themes/soft-dark-color-theme.json",
+        JSON.stringify(softAlt, null)
       ),
     ])
   )
