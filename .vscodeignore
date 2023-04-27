@@ -1,4 +1,12 @@
 .vscode/**
 .vscode-test/**
+.github/
 .gitignore
-vsc-extension-quickstart.md
+/node_modules/**
+/node_modules/
+/package-lock.json
+/build/**
+/src/**
+/deprecated/**
+/samples/**
+**/*.js

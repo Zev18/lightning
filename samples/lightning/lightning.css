@@ -1,0 +1,79 @@
+body {
+  background-color: #f5f5f5 !important;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+.lightning-header {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffa500;
+  text-shadow: 1px 1px 1px #fff;
+  margin: 40px 0;
+}
+
+.lightning-header::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #ffa500;
+  margin-top: 10px;
+}
+
+.strike-count {
+  font-size: 72px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffa500;
+  text-shadow: 1px 1px 1px #fff;
+  margin: 20px 0;
+}
+
+.strike-count::before {
+  content: "Lightning Strikes: ";
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.detecting-toggle {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff !important;
+  background-color: #ffa500;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+.detecting-toggle:hover {
+  background-color: #ff8c00;
+}
+
+.lightning-counter {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 1px 1px 1px #ccc;
+  border-radius: 10px;
+}
+
+.footer-text {
+  font-size: 12px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.lightning-counter::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #ffa500;
+  margin-bottom: 20px;
+}

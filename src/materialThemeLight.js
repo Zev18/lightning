@@ -1,13 +1,186 @@
 const { hexToHexWithAlpha } = require("colors-convert");
+const convert = require("color-convert");
 
 function hex(color, alpha = 1) {
   return hexToHexWithAlpha(color, alpha);
 }
+///////////////////////
+// DARK PALETTE
+///////////////////////
 
-function getTheme({ theme, name, colors }) {
+// color modification
+
+// Helper functions to convert between color formats
+function adjustHsl(color, h, s, l) {
+  let hslColor = convert.hex.hsl(color.substring(1));
+  let newHsl = [hslColor[0] + h, hslColor[1] + s, hslColor[2] + l];
+  newHsl.forEach((value) => {
+    if (value == newHsl[0]) {
+      if (value > 360) {
+        value -= 360;
+      } else if (value < 0) {
+        value += 360;
+      }
+    } else {
+      if (value > 100) {
+        value = 100;
+      } else if (value < 0) {
+        value = 0;
+      }
+    }
+  });
+  return "#" + convert.hsl.hex(newHsl);
+}
+
+// basics
+const WHITE = "#FFFFFF";
+const BLACK = "#000000";
+const UNKNOWN = "#FF0000";
+
+// ui colors
+const BG_DEEP = "#f1fbff";
+const BG = "#f1fbff";
+const BG1 = "#e5f3f9";
+const BG2 = "#d3e6ef";
+const BG3 = "#bbd5e1";
+const BG4 = "#f1fbff";
+
+const ACCENT = "#467ed1";
+const DEFAULT_TEXT = "#336283";
+const EDITOR_DEFAULT = "#3475a2";
+const SECONDARY_ACCENT = "#87aae6";
+const LINK = "#5691FC";
+const TERTIARY_ACCENT = "#a9b0ff";
+
+const ERROR_BG = "#461827";
+const ERROR = "#FF4171";
+const WARNING = "#FF855F";
+
+const MODIFIED = "#00cdb1";
+const ADDED = ACCENT;
+const DELETED = "#3b393f";
+
+const TRANSPARENT = "#00000000";
+
+// syntax highlight colors
+const COMMENT = "#89b2cd";
+
+const GREEN = "#2bc9cc";
+const TEAL = "#00b3c7";
+const CYAN = "#38b2e7";
+const SKY = "#0091f9";
+const BLUE = "#2681f9";
+const TWILIGHT = "#3c6aff";
+const INDIGO = "#9172FF";
+const VIOLET = "#B76DFF";
+const RED = "#ff7888";
+const PINK = "#ff7ca8";
+const ORANGE = "#f07178";
+
+// JSON keys
+const JSON0 = "#00b0d8";
+const JSON1 = "#2482f6";
+const JSON2 = "#4052f5";
+const JSON3 = "#763ef9";
+const JSON4 = "#b13dfa";
+const JSON5 = "#e630f3";
+const JSON6 = "#f334ad";
+const JSON7 = "#f2427d";
+const JSON8 = "#de525b";
+
+const colors = {
+  json0: JSON0,
+  json1: JSON1,
+  json2: JSON2,
+  json3: JSON3,
+  json4: JSON4,
+  json5: JSON5,
+  json6: JSON6,
+  json7: JSON7,
+  json8: JSON8,
+
+  white: WHITE,
+  black: BLACK,
+  unknown: UNKNOWN,
+
+  accent: ACCENT,
+  defaultText: DEFAULT_TEXT,
+  secondaryAccent: SECONDARY_ACCENT,
+  tertiaryAccent: TERTIARY_ACCENT,
+  link: LINK,
+  editorDefault: EDITOR_DEFAULT,
+
+  added: ADDED,
+  modified: MODIFIED,
+  deleted: DELETED,
+
+  errorBg: ERROR_BG,
+  error: ERROR,
+  warning: WARNING,
+
+  transparent: TRANSPARENT,
+
+  secondaryText: "#90a6ca",
+
+  terminalBlack: "#000",
+  terminalBlue: BLUE,
+  terminalBrightBlack: "#787878",
+  terminalBrightBlue: "#2680ff",
+  terminalBrightCyan: "#00bfff",
+  terminalBrightGreen: "#00ffbb",
+  terminalBrightMagenta: "#bc47b2",
+  terminalBrightRed: "#fe2b64",
+  terminalBrightWhite: "#cedcde",
+  terminalBrightYellow: "#faa630",
+  terminalCyan: CYAN,
+  terminalGreen: "#44eabd",
+  terminalMagenta: INDIGO,
+  terminalRed: "#cf3e5b",
+  terminalWhite: "#c4c6cb",
+  terminalYellow: "#f5c86e",
+
+  bg: BG,
+  bg0: BG_DEEP,
+  bg1: BG1,
+  bg2: BG2,
+  bg3: BG3,
+  bg4: BG4,
+
+  comment: COMMENT,
+  green: GREEN,
+  teal: TEAL,
+  cyan: CYAN,
+  sky: SKY,
+  blue: BLUE,
+  twilight: TWILIGHT,
+  indigo: INDIGO,
+  violet: VIOLET,
+  orange: ORANGE,
+  red: RED,
+  pink: PINK,
+};
+
+function getTheme({ theme, name, bgColor, saturation }) {
+  colors.bg = bgColor || "#d9d8fa";
+  colors.bg0 = colors.bg;
+  colors.bg1 = colors.bg;
+  colors.bg2 = colors.bg;
+  colors.bg3 = colors.bg;
+  colors.bg4 = colors.bg;
+
+  if (saturation == "low") {
+    colors.secondaryText = adjustHsl(colors.bg, 0, -25, -25);
+    colors.secondaryAccent = adjustHsl(colors.bg, 0, 0, -40);
+    colors.comment = adjustHsl(colors.bg, 0, -30, -25);
+  } else {
+    colors.secondaryText = adjustHsl(colors.bg, 50, 10, -20);
+    colors.secondaryAccent = adjustHsl(colors.bg, 50, 20, -25);
+    colors.comment = adjustHsl(colors.bg, 50, 10, -20);
+  }
+
   return {
     name: name,
-    type: "dark",
+    type: theme,
     colors: {
       //////////////////////////////
       // CONTRAST COLOR
@@ -29,11 +202,11 @@ function getTheme({ theme, name, colors }) {
       // Overall foreground color. This color is only used if not overridden by a component.
       foreground: hex(colors.defaultText),
       // Shadow color of widgets such as Find/Replace inside the editor.
-      "widget.shadow": hex(colors.bg0, 0.5),
+      "widget.shadow": hex(adjustHsl(colors.bg, 0, -2, -5)),
       // Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal).
       "selection.background": hex(colors.secondaryAccent, 0.6),
       // Foreground color for description text providing additional information, for example for a label.
-      descriptionForeground: hex(colors.secondaryAccent),
+      descriptionForeground: hex(colors.secondaryText, 0.8),
       // Overall foreground color for error messages (this color is only used if not overridden by a component).
       errorForeground: hex(colors.error),
       // The default color for icons in the workbench.
@@ -175,7 +348,7 @@ function getTheme({ theme, name, colors }) {
       // An active list/tree has keyboard focus, an inactive does not.
       //////////////////////////////
       // List/Tree background color for the selected item when the list/tree is active.
-      "list.activeSelectionBackground": hex(colors.bg0),
+      "list.activeSelectionBackground": hex(colors.bg, 0.8),
       // List/Tree foreground color for the selected item when the list/tree is active.
       "list.activeSelectionForeground": hex(colors.accent),
       // List/Tree drag and drop background when moving items around using the mouse.
@@ -191,7 +364,7 @@ function getTheme({ theme, name, colors }) {
       // List/Tree foreground when hovering over items using the mouse.
       "list.hoverForeground": hex(colors.accent),
       // List/Tree background color for the selected item when the list/tree is inactive.
-      "list.inactiveSelectionBackground": hex(colors.bg0),
+      "list.inactiveSelectionBackground": hex(colors.bg, 0.8),
       // List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not.
       "list.inactiveSelectionForeground": hex(colors.accent),
       // List background color for the focused item when the list is inactive. An active list has keyboard focus, an inactive does not. Currently only supported in lists.
@@ -218,7 +391,7 @@ function getTheme({ theme, name, colors }) {
       // List/Tree foreground color of the match highlights on actively focused items when searching inside the list/tree
       // "list.focusHighlightForeground": hex(colors.unknown),
       // Quick picker background color for the focused item.
-      // "quickInputList.focusBackground": hex(colors.unknown),
+      "quickInputList.focusBackground": hex(colors.secondaryAccent, 0.3),
       // Quick picker foreground color for the focused item.
       // "quickInputList.focusForeground": hex(colors.unknown),
       // Quick picker icon foreground color for the focused item.
@@ -237,21 +410,21 @@ function getTheme({ theme, name, colors }) {
       // and allows fast switching between views of the Side Bar.
       //////////////////////////////
       // Activity Bar background color.
-      "activityBar.background": hex(colors.bg),
+      "activityBar.background": hex(colors.bg0),
       // Activity Bar foreground color (for example used for the icons).
       "activityBar.foreground": hex(colors.accent),
       // Activity Bar item foreground color when it is inactive.
       "activityBar.inactiveForeground": hex(colors.secondaryAccent),
       // Activity Bar border color with the Side Bar.
-      // "activityBar.border": hex(colors.gray07),
+      // "activityBar.border": hex(colors.accent),
       // Activity notification badge background color.
       "activityBarBadge.background": hex(colors.accent),
       // Activity notification badge foreground color.
-      "activityBarBadge.foreground": hex(colors.bg),
+      "activityBarBadge.foreground": hex(colors.bg0),
       // Activity Bar active indicator border color (left vertical line).
-      "activityBar.activeBorder": hex(colors.accent),
+      "activityBar.activeBorder": hex(colors.bg0),
       // Activity Bar optional background color for the active element.
-      // "activityBar.activeBackground": hex(colors.gray10),
+      // "activityBar.activeBackground": hex(colors.accent),
       // Activity bar focus border color for the active item.
       // "activityBar.activeFocusBorder": hex(colors.lavender),
 
@@ -260,17 +433,17 @@ function getTheme({ theme, name, colors }) {
       // The Side Bar contains views like the Explorer and Search.
       //////////////////////////////
       // Side Bar background color.
-      "sideBar.background": hex(colors.bg1),
+      "sideBar.background": hex(colors.bg0),
       // Side Bar foreground color. The Side Bar is the container for views like Explorer and Search.
-      "sideBar.foreground": hex(colors.tertiaryAccent),
+      "sideBar.foreground": hex(colors.secondaryText),
       // Side Bar border color on the side separating the editor.
-      "sideBar.border": hex(colors.bg),
+      "sideBar.border": hex(colors.secondaryAccent, 0.2),
       // Drag and drop feedback color for the side bar sections. The color should have transparency so that the side bar sections can still shine through.
       "sideBar.dropBackground": hex(colors.secondaryAccent, 0.5),
       // Side Bar title foreground color.
       "sideBarTitle.foreground": hex(colors.accent),
       // Side Bar section header background color.
-      "sideBarSectionHeader.background": hex(colors.bg3),
+      "sideBarSectionHeader.background": hex(colors.bg0),
       // Side Bar section header foreground color.
       // "sideBarSectionHeader.foreground": hex(colors.gray02),
       // Side bar section header border color.
@@ -309,7 +482,7 @@ function getTheme({ theme, name, colors }) {
       // Background color of the editor group title header when Tabs are disabled (set "workbench.editor.showTabs": false)
       "editorGroupHeader.noTabsBackground": hex(colors.bg),
       // Background color of the Tabs container
-      "editorGroupHeader.tabsBackground": hex(colors.bg1),
+      "editorGroupHeader.tabsBackground": hex(colors.bg0),
       // Render a border above breadcrumbs
       // "editorGroupHeader.tabsBorder": hex(colors.unknown),
       // Render a border below the editor group header (for example, below breadcrumbs if enabled)
@@ -319,25 +492,25 @@ function getTheme({ theme, name, colors }) {
       // Border color of an empty editor group that is focused
       // "editorGroup.focusedEmptyBorder": hex(colors.unknown),
       // Active Tab background color in an active group
-      "tab.activeBackground": hex(colors.bg),
+      "tab.activeBackground": hex(colors.bg, 0.8),
       // Active Tab background color in an inactive editor group
-      "tab.unfocusedActiveBackground": hex(colors.bg),
+      "tab.unfocusedActiveBackground": hex(colors.bg3),
       // Active Tab foreground color in an active group
       "tab.activeForeground": hex(colors.accent),
       // Border to separate Tabs from each other
-      "tab.border": hex(colors.bg),
+      "tab.border": hex(colors.bg0),
       // Bottom border for the active tab
-      // "tab.activeBorder": hex(colors.lavender),
+      "tab.activeBorder": hex(colors.accent),
       // Bottom border for the active tab in an inactive editor group
-      // "tab.unfocusedActiveBorder": hex(colors.lavender, 0.3),
+      "tab.unfocusedActiveBorder": hex(colors.accent, 0.8),
       // Top border for the active tab
       // "tab.activeBorderTop": hex(colors.gray09),
       // Top border for the active tab in an inactive editor group
       // "tab.unfocusedActiveBorderTop": hex(colors.gray09),
       // Inactive Tab background color
-      "tab.inactiveBackground": hex(colors.bg1),
+      "tab.inactiveBackground": hex(colors.bg0),
       // Inactive Tab foreground color in an active group
-      "tab.inactiveForeground": hex(colors.secondaryAccent),
+      "tab.inactiveForeground": hex(colors.secondaryText),
       // Active tab foreground color in an inactive editor group
       // "tab.unfocusedActiveForeground": hex(colors.gray03),
       // Inactive tab foreground color in an inactive editor group
@@ -347,7 +520,7 @@ function getTheme({ theme, name, colors }) {
       // Tab background color in an unfocused group when hovering
       "tab.unfocusedHoverBackground": hex(colors.bg2),
       // Border to highlight tabs when hovering
-      // "tab.hoverBorder": hex(colors.lavender),
+      // "tab.hoverBorder": hex(colors.accent),
       // Border to highlight tabs in an unfocused group when hovering
       // "tab.unfocusedHoverBorder": hex(colors.lavender),
       // Border on the top of modified (dirty) active tabs in an active group
@@ -450,9 +623,9 @@ function getTheme({ theme, name, colors }) {
       // The current line is typically shown as either background highlight or a border (not both).
       // ----------------------------------------
       // Background color for the highlight of line at the cursor position.
-      "editor.lineHighlightBackground": hex(colors.secondaryAccent, 0.25),
+      "editor.lineHighlightBackground": hex(colors.secondaryAccent, 0.15),
       // Background color for the border around the line at the cursor position.
-      "editor.lineHighlightBorder": hex(colors.secondaryAccent, 0.35),
+      "editor.lineHighlightBorder": hex(colors.secondaryAccent, 0.25),
 
       // The link color is visible when clicking on a link.
       // ----------------------------------------
@@ -586,7 +759,7 @@ function getTheme({ theme, name, colors }) {
       // The gutter contains the glyph margins and the line numbers:
       // ----------------------------------------
       // Background color of the editor gutter. The gutter contains the glyph margins and the line numbers.
-      "editorGutter.background": hex(colors.bg0),
+      "editorGutter.background": hex(colors.bg),
       // Editor gutter background color for lines that are modified.
       "editorGutter.modifiedBackground": hex(colors.modified),
       // Editor gutter background color for lines that are added.
@@ -737,15 +910,15 @@ function getTheme({ theme, name, colors }) {
       // Panels are shown below the editor area and contain views like Output and Integrated Terminal.
       //////////////////////////////
       // Panel background color.
-      "panel.background": hex(colors.bg1),
+      "panel.background": hex(colors.bg0),
       // Panel border color to separate the panel from the editor.
-      "panel.border": hex(colors.secondaryAccent),
+      "panel.border": hex(colors.secondaryAccent, 0.2),
       // Border color for the active panel title.
       // "panelTitle.activeBorder": hex(colors.lavender),
       // Title color for the active panel.
       "panelTitle.activeForeground": hex(colors.accent),
       // Title color for the inactive panel.
-      "panelTitle.inactiveForeground": hex(colors.secondaryAccent),
+      "panelTitle.inactiveForeground": hex(colors.secondaryText),
       // Input box border for inputs in the panel.
       // "panelInput.border": hex(colors.gray03),
 
@@ -807,11 +980,11 @@ function getTheme({ theme, name, colors }) {
       // TITLE BAR COLORS
       //////////////////////////////
       // Title Bar background when the window is active.
-      "titleBar.activeBackground": hex(colors.bg),
+      "titleBar.activeBackground": hex(colors.bg0),
       // Title Bar foreground when the window is active.
       "titleBar.activeForeground": hex(colors.accent),
       // Title Bar background when the window is inactive.
-      "titleBar.inactiveBackground": hex(colors.bg1),
+      "titleBar.inactiveBackground": hex(colors.bg0),
       // Title Bar foreground when the window is inactive.
       "titleBar.inactiveForeground": hex(colors.defaultText),
       // Title bar border color.
@@ -904,7 +1077,7 @@ function getTheme({ theme, name, colors }) {
       // INTEGRATED TERMINAL COLORS
       //////////////////////////////
       // The background of the Integrated Terminal's viewport.
-      "terminal.background": hex(colors.bg1),
+      "terminal.background": hex(colors.bg0),
       // The color of the border that separates split panes within the terminal. This defaults to panel.border.
       // "terminal.border": hex(colors.gray06),
       // The default foreground color of the Integrated Terminal.
@@ -991,7 +1164,7 @@ function getTheme({ theme, name, colors }) {
       ),
       // Color for conflicting Git resources. Used for file labels and the SCM viewlet.
       "gitDecoration.conflictingResourceForeground": hex(colors.error),
-      // Color for submodule resources.
+      // Color for submodule resources
       "gitDecoration.submoduleResourceForeground": hex(colors.warning),
       // Foreground color for staged deletions git decorations.
       "gitDecoration.stageDeletedResourceForeground": hex(colors.deleted),
@@ -1049,9 +1222,9 @@ function getTheme({ theme, name, colors }) {
       // The theme colors for breadcrumbs navigation:
       //////////////////////////////
       // Color of breadcrumb items.
-      "breadcrumb.foreground": hex(colors.secondaryAccent),
+      "breadcrumb.foreground": hex(colors.secondaryText),
       // Background color of breadcrumb items.
-      // "breadcrumb.background": hex(colors.gray09),
+      "breadcrumb.background": hex(colors.bg1, 0.8),
       // Color of focused breadcrumb items.
       "breadcrumb.focusForeground": hex(colors.cyan),
       // Color of selected breadcrumb items.
@@ -1335,7 +1508,7 @@ function getTheme({ theme, name, colors }) {
       },
       {
         name: "Storage - function",
-        scope: ["storage.type.function"],
+        scope: ["storage.type.function", "keyword.other", "keyword.control"],
         settings: {
           foreground: hex(colors.indigo),
           fontStyle: "bold",
@@ -1366,13 +1539,12 @@ function getTheme({ theme, name, colors }) {
           "punctuation.definition.tag.begin.html",
           "punctuation.definition.tag.end.html",
           "punctuation.section.embedded",
-          "keyword.other",
-          "keyword.control",
+          "punctuation.section",
 
           "keyword.operator.assignment",
         ],
         settings: {
-          foreground: hex(colors.twilight),
+          foreground: hex(colors.sky, 0.8),
         },
       },
       {
@@ -1395,7 +1567,7 @@ function getTheme({ theme, name, colors }) {
           "markup.deleted.git_gutter",
         ],
         settings: {
-          foreground: hex(colors.teal),
+          foreground: hex(colors.twilight),
           fontStyle: "bold",
         },
       },
@@ -1411,7 +1583,7 @@ function getTheme({ theme, name, colors }) {
         scope: ["entity.name.tag.html"],
         settings: {
           fontStyle: "bold",
-          foreground: hex(colors.cyan),
+          foreground: hex(colors.blue),
         },
       },
       {
@@ -1592,7 +1764,7 @@ function getTheme({ theme, name, colors }) {
           "variable.function.constructor",
         ],
         settings: {
-          foreground: hex(colors.sky),
+          foreground: hex(colors.cyan),
         },
       },
       {

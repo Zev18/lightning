@@ -4,10 +4,140 @@ function hex(color, alpha = 1) {
   return hexToHexWithAlpha(color, alpha);
 }
 
-function getTheme({ theme, name, colors }) {
+///////////////////////
+// DEFAULT PALETTE
+///////////////////////
+
+// basics
+const WHITE = "#FFFFFF";
+const BLACK = "#000000";
+const UNKNOWN = "#FF0000";
+
+// ui colors
+const BG_DEEP = "#14121d";
+const BG = "#171724";
+const BG1 = "#242737";
+const BG2 = "#34344e";
+const BG3 = "#3b3f5b";
+const BG4 = "#51576e";
+
+const ACCENT = "#78d0ff";
+const DEFAULT_TEXT = "#9bb4c5";
+const EDITOR_DEFAULT = "#76c6ff";
+const SECONDARY_ACCENT = "#7b8eae";
+const LINK = "#5691FC";
+const TERTIARY_ACCENT = "#8e9abd";
+
+const ERROR_BG = "#461827";
+const ERROR = "#FF4171";
+const WARNING = "#FF855F";
+
+const MODIFIED = "#65ffd6";
+const ADDED = ACCENT;
+const DELETED = "#b62144";
+
+const TRANSPARENT = "#00000000";
+
+// syntax highlight colors
+const COMMENT = "#646995";
+
+const GREEN = "#66ffde";
+const TEAL = "#21fbff";
+const CYAN = "#3EC5FF";
+const SKY = "#44b1ff";
+const BLUE = "#2681f9";
+const TWILIGHT = "#3c6aff";
+const INDIGO = "#9172FF";
+const VIOLET = "#B76DFF";
+const RED = "#ff477e";
+const PINK = "#ff7ca8";
+const ORANGE = "#f07178";
+
+// JSON keys
+const JSON0 = "#6be4ff";
+const JSON1 = "#6baeff";
+const JSON2 = "#6b7aff";
+const JSON3 = "#976bff";
+const JSON4 = "#c66bff";
+const JSON5 = "#f56bff";
+const JSON6 = "#ff6bc9";
+const JSON7 = "#ff6b9c";
+const JSON8 = "#ff505b";
+
+const colors = {
+  json0: JSON0,
+  json1: JSON1,
+  json2: JSON2,
+  json3: JSON3,
+  json4: JSON4,
+  json5: JSON5,
+  json6: JSON6,
+  json7: JSON7,
+  json8: JSON8,
+
+  terminalBlack: "#000",
+  terminalBlue: BLUE,
+  terminalBrightBlack: "#333",
+  terminalBrightBlue: SKY,
+  terminalBrightCyan: TEAL,
+  terminalBrightGreen: GREEN,
+  terminalBrightMagenta: VIOLET,
+  terminalBrightRed: RED,
+  terminalBrightWhite: WHITE,
+  terminalBrightYellow: ORANGE,
+  terminalCyan: CYAN,
+  terminalGreen: "#44eabd",
+  terminalMagenta: INDIGO,
+  terminalRed: "#cf3e5b",
+  terminalWhite: "#c4c6cb",
+  terminalYellow: "#f5c86e",
+
+  white: WHITE,
+  black: BLACK,
+  unknown: UNKNOWN,
+
+  accent: ACCENT,
+  defaultText: DEFAULT_TEXT,
+  secondaryAccent: SECONDARY_ACCENT,
+  tertiaryAccent: TERTIARY_ACCENT,
+  link: LINK,
+  editorDefault: EDITOR_DEFAULT,
+
+  added: ADDED,
+  modified: MODIFIED,
+  deleted: DELETED,
+
+  errorBg: ERROR_BG,
+  error: ERROR,
+  warning: WARNING,
+
+  transparent: TRANSPARENT,
+
+  bg: BG,
+  bg0: BG_DEEP,
+  bg1: BG1,
+  bg2: BG2,
+  bg3: BG3,
+  bg4: BG4,
+
+  comment: COMMENT,
+  green: GREEN,
+  teal: TEAL,
+  cyan: CYAN,
+  sky: SKY,
+  blue: BLUE,
+  twilight: TWILIGHT,
+  indigo: INDIGO,
+  violet: VIOLET,
+  orange: ORANGE,
+  red: RED,
+  pink: PINK,
+};
+
+function getTheme({ theme, name }) {
   return {
     name: name,
-    type: "dark",
+    type: theme,
     colors: {
       //////////////////////////////
       // CONTRAST COLOR
@@ -327,13 +457,13 @@ function getTheme({ theme, name, colors }) {
       // Border to separate Tabs from each other
       "tab.border": hex(colors.bg),
       // Bottom border for the active tab
-      // "tab.activeBorder": hex(colors.lavender),
+      // "tab.activeBorder": hex(colors.accent),
       // Bottom border for the active tab in an inactive editor group
       // "tab.unfocusedActiveBorder": hex(colors.lavender, 0.3),
       // Top border for the active tab
-      // "tab.activeBorderTop": hex(colors.gray09),
+      "tab.activeBorderTop": hex(colors.accent),
       // Top border for the active tab in an inactive editor group
-      // "tab.unfocusedActiveBorderTop": hex(colors.gray09),
+      "tab.unfocusedActiveBorderTop": hex(colors.accent, 0.8),
       // Inactive Tab background color
       "tab.inactiveBackground": hex(colors.bg1),
       // Inactive Tab foreground color in an active group
@@ -1006,7 +1136,6 @@ function getTheme({ theme, name, colors }) {
       "settings.headerForeground": hex(colors.accent),
       // The line that indicates a modified setting.
       // "settings.modifiedItemIndicator": hex(colors.cyan),
-
       "settings.sashBorder": hex(colors.secondaryAccent, 0.5),
       "settings.dropdownBorder": hex(colors.secondaryAccent, 0.5),
       "settings.dropdownListBorder": hex(colors.secondaryAccent, 0.5),
@@ -1035,14 +1164,14 @@ function getTheme({ theme, name, colors }) {
       // Text input box foreground.
       // "settings.textInputForeground": hex(colors.gray01),
       // Text input box border.
-      "settings.textInputBorder": hex(colors.accent, 0.75),
+      "settings.textInputBorder": hex(colors.secondaryAccent, 0.5),
 
       // Number input box background.
       // "settings.numberInputBackground": hex(colors.gray05),
       // Number input box foreground.
       // "settings.numberInputForeground": hex(colors.gray01),
       // Number input box border.
-      "settings.numberInputBorder": hex(colors.accent, 0.75),
+      "settings.numberInputBorder": hex(colors.secondaryAccent, 0.5),
 
       //////////////////////////////
       // BREADCRUMBS
@@ -1372,7 +1501,7 @@ function getTheme({ theme, name, colors }) {
           "keyword.operator.assignment",
         ],
         settings: {
-          foreground: hex(colors.twilight),
+          foreground: hex(colors.twilight, 0.7),
         },
       },
       {

@@ -1,24 +1,8 @@
-// legacy colors
-// const GREEN = "#37E7AC";
-// const CYAN = "#51FBDE";
-// const BLUE = "#00B2FF";
-const PURPLE = "#9A89B4";
-const LAVENDER = "#9B6DFF";
-const ROSE = "#FF6B9D";
-const YELLOW = "#FED604";
+///////////////////////
+// DEFAULT PALETTE
+///////////////////////
 
-const GRAY01 = "#D9E0E8";
-const GRAY02 = "#808182";
-const GRAY03 = "#68737D";
-const GRAY04 = "#36393C";
-const GRAY05 = "#292F38";
-const GRAY06 = "#2F3237";
-const GRAY07 = "#252830";
-const GRAY08 = "#252A32";
-const GRAY09 = "#1F2330";
-const GRAY10 = "#161922";
-const GRAY11 = "#1C202B";
-
+// basics
 const WHITE = "#FFFFFF";
 const BLACK = "#000000";
 const UNKNOWN = "#FF0000";
@@ -53,12 +37,12 @@ const COMMENT = "#4E548F";
 
 const GREEN = "#66ffde";
 const TEAL = "#21fbff";
-const CYAN = "#61d0ff";
+const CYAN = "#3EC5FF";
 const SKY = "#44b1ff";
 const BLUE = "#2681f9";
 const TWILIGHT = "#3c6aff";
 const INDIGO = "#9172FF";
-const VIOLET = "#CCA0FF";
+const VIOLET = "#B76DFF";
 const RED = "#ff477e";
 const PINK = "#ff7ca8";
 const ORANGE = "#f07178";
@@ -75,25 +59,6 @@ const JSON7 = "#ff6b9c";
 const JSON8 = "#ff505b";
 
 const colors = {
-  purple: PURPLE,
-  lavender: LAVENDER,
-  pink: PINK,
-  rose: ROSE,
-  orange: ORANGE,
-  yellow: YELLOW,
-
-  gray01: GRAY01,
-  gray02: GRAY02,
-  gray03: GRAY03,
-  gray04: GRAY04,
-  gray05: GRAY05,
-  gray06: GRAY06,
-  gray07: GRAY07,
-  gray08: GRAY08,
-  gray09: GRAY09,
-  gray10: GRAY10,
-  gray11: GRAY11,
-
   json0: JSON0,
   json1: JSON1,
   json2: JSON2,
@@ -103,6 +68,23 @@ const colors = {
   json6: JSON6,
   json7: JSON7,
   json8: JSON8,
+
+  terminalBlack: "#000",
+  terminalBlue: BLUE,
+  terminalBrightBlack: "#333",
+  terminalBrightBlue: SKY,
+  terminalBrightCyan: TEAL,
+  terminalBrightGreen: GREEN,
+  terminalBrightMagenta: VIOLET,
+  terminalBrightRed: RED,
+  terminalBrightWhite: WHITE,
+  terminalBrightYellow: ORANGE,
+  terminalCyan: CYAN,
+  terminalGreen: "#44eabd",
+  terminalMagenta: INDIGO,
+  terminalRed: "#cf3e5b",
+  terminalWhite: "#c4c6cb",
+  terminalYellow: "#f5c86e",
 
   white: WHITE,
   black: BLACK,
@@ -141,7 +123,9 @@ const colors = {
   twilight: TWILIGHT,
   indigo: INDIGO,
   violet: VIOLET,
+  orange: ORANGE,
   red: RED,
+  pink: PINK,
 };
 
 module.exports = { colors };

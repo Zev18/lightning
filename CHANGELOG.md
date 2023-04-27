@@ -1,5 +1,26 @@
 # Changelog for Lightning Theme
 
+## [2.0.0] - 2023-04-27
+
+### Added
+
+- 10 new themes!
+- Various color corrections on existing themes
+- New readme
+
+## [1.0.1] - 2023-04-24
+
+### Added
+
+- Corrected debug toolbar colors
+- Finetuned various other colors
+
+## [1.0.0] - 2023-04-19
+
+### Added
+
+- Refactored the entire thing so that it uses variables now. Making variant themes will be easier now. Expect more variat themes to come soon.
+
 ## [0.4.0] - 2023-04-18
 
 ### Added
