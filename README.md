@@ -4,9 +4,7 @@
 
 A dark, vibrant theme for those who enjoy cool colors.
 
-![Lightning screenshot - Python](images/lightning_python.png)
-
-![Lightning screenshot - HTML](images/lightning_html.png)
+![Lightning promo](assets/Lightning_promo.jpeg)
 
 ## About
 
@@ -27,8 +25,6 @@ I developed Lightning to be a fun theme! A theme with more good colors (like blu
 ## Recommended pairing
 
 Lightning was designed with a lot of italic components. I recommend using a font that has stylized italics, such as [Cascadia Code](https://github.com/microsoft/cascadia-code) with the cursive-style italics enabled.
-
-The screenshots above, in addition to Cascadia Code, use the [Bearded Icons](https://marketplace.visualstudio.com/items?itemName=BeardedBear.beardedicons) file icon pack and the [Feather Icons](https://marketplace.visualstudio.com/items?itemName=melishev.feather-vscode) product icon pack.
 
 ## Support the dev
 

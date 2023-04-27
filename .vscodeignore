@@ -2,9 +2,11 @@
 .vscode-test/**
 .github/
 .gitignore
+/node_modules/**
 /node_modules/
 /package-lock.json
 /build/**
 /src/**
 /deprecated/**
 /samples/**
+**/*.js
