@@ -1,5 +1,12 @@
 # Changelog for Lightning Theme
 
+## [2.0.1] - 2023-04-29
+
+### Changed
+
+- Adjusted terminal ansi colors in light themes to make it easier to read
+- Made the background color for Lightning Soft - Dark a little more saturated
+
 ## [2.0.0] - 2023-04-27
 
 ### Added
