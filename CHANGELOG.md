@@ -1,6 +1,6 @@
 # Changelog for Lightning Theme
 
-## [2.0.1] - 2023-04-29
+## [2.0.2] - 2023-04-29
 
 ### Changed
 
