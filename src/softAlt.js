@@ -13,7 +13,7 @@ const BLACK = "#000000";
 const UNKNOWN = "#FF0000";
 
 // ui colors
-const BG_DEEP = "#14121d";
+const BG_DEEP = "#14111f";
 const BG = "#212135";
 const BG1 = "#242737";
 const BG2 = "#34344e";
