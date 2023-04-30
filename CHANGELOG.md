@@ -1,5 +1,11 @@
 # Changelog for Lightning Theme
 
+## [2.0.3] - 2023-04-30
+
+### Fixed
+
+- Erm... I forgot to build the jsons last time... should be fixed now
+
 ## [2.0.2] - 2023-04-29
 
 ### Changed
