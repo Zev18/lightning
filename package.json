@@ -11,7 +11,8 @@
   "version": "2.1.0",
   "author": {
     "name": "Zev Ross",
-    "email": "zevross@gmail.com"
+    "email": "zevross@gmail.com",
+    "website": "https://zevross.dev"
   },
   "engines": {
     "vscode": "^1.75.0"
