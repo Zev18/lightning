@@ -804,7 +804,7 @@ function getTheme({ theme, name }) {
       // Peek views are used to show references and declarations as a view inside the editor.
       //////////////////////////////
       // Color of the peek view borders and arrow.
-      "peekView.border": hex(colors.secondaryAccent),
+      "peekView.border": hex(colors.accent),
       // Background color of the peek view editor.
       "peekViewEditor.background": hex(colors.bg1),
       // Background color of the gutter in the peek view editor.
@@ -819,20 +819,20 @@ function getTheme({ theme, name }) {
       // Background color of the peek view result list.
       "peekViewResult.background": hex(colors.bg),
       // Foreground color for file nodes in the peek view result list.
-      // "peekViewResult.fileForeground": hex(colors.gray03),
+      "peekViewResult.fileForeground": hex(colors.accent),
       // Foreground color for line nodes in the peek view result list.
-      // "peekViewResult.lineForeground": hex(colors.gray03),
+      "peekViewResult.lineForeground": hex(colors.link),
       // Match highlight color in the peek view result list.
       "peekViewResult.matchHighlightBackground": hex(
         colors.tertiaryAccent,
         0.3
       ),
       // Background color of the selected entry in the peek view result list.
-      // "peekViewResult.selectionBackground": hex(colors.cyan, 0.3),
+      "peekViewResult.selectionBackground": hex(colors.accent, 0.2),
       // Foreground color of the selected entry in the peek view result list.
-      // "peekViewResult.selectionForeground": hex(colors.gray01),
+      "peekViewResult.selectionForeground": hex(colors.accent),
       // Background color of the peek view title area.
-      "peekViewTitle.background": hex(colors.accent),
+      "peekViewTitle.background": hex(colors.bg),
       // Color of the peek view title info.
       "peekViewTitleDescription.foreground": hex(colors.link),
       // Color of the peek view title.

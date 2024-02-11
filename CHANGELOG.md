@@ -1,5 +1,11 @@
 # Changelog for Lightning Theme
 
+## [2.1.0] - 2024-02-10
+
+### Fixed
+
+- Finally got around to fixing the peek view colors
+
 ## [2.0.3] - 2023-04-30
 
 ### Fixed
@@ -32,7 +38,8 @@
 
 ### Added
 
-- Refactored the entire thing so that it uses variables now. Making variant themes will be easier now. Expect more variat themes to come soon.
+- Refactored the entire thing so that it uses variables now. Making variant
+  themes will be easier now. Expect more variat themes to come soon.
 
 ## [0.4.0] - 2023-04-18
 
