@@ -1,5 +1,11 @@
 # Changelog for Lightning Theme
 
+## [2.1.1] - 2024-02-25
+
+### Fixed
+
+- Built the jsons
+
 ## [2.1.0] - 2024-02-10
 
 ### Fixed
